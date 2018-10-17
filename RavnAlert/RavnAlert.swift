@@ -38,7 +38,7 @@ public class RavnAlert: UIView {
     public func setup(title: String, message: String, buttonTitle: String, image: UIImage) {
         self.titleLabel.text = title
         self.messageLabel.text = message
-        self.mainButton.titleLabel?.text = buttonTitle
+        self.mainButton.setTitle(buttonTitle, for: .normal)
         self.iconImage.image = image
     }
     
@@ -54,9 +54,13 @@ public class RavnAlert: UIView {
         
         self.titleLabel.text = ""
         self.messageLabel.text = ""
+        
+        mainButton.addTarget(self, action:#selector(exitView), for: .touchUpInside)
     }
     
-    
+    @objc private func exitView() {
+        self.view.removeFromSuperview()
+    }
 
     /*
     // Only override draw() if you perform custom drawing.
