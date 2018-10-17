@@ -10,6 +10,8 @@ import UIKit
 
 public class RavnAlert: UIView {
     
+    public typealias ButtonAction = () -> ()
+    
     @IBOutlet private weak var containerView: UIView!
     @IBOutlet private weak var cardView: UIView!
     @IBOutlet private weak var iconContainerView: UIView!
@@ -24,6 +26,7 @@ public class RavnAlert: UIView {
     
     let nibName = "RavnAlert"
     var view: UIView!
+    private var buttonAction: ButtonAction = { }
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,11 +38,12 @@ public class RavnAlert: UIView {
         setUpView()
     }
     
-    public func setup(title: String, message: String, buttonTitle: String, image: UIImage) {
+    public func setup(title: String, message: String, buttonTitle: String, image: UIImage, buttonAction: @escaping ButtonAction) {
         self.titleLabel.text = title
         self.messageLabel.text = message
         self.mainButton.setTitle(buttonTitle, for: .normal)
         self.iconImage.image = image
+        self.buttonAction = buttonAction
     }
     
     private func setUpView() {
@@ -54,12 +58,6 @@ public class RavnAlert: UIView {
         
         self.titleLabel.text = ""
         self.messageLabel.text = ""
-        
-        mainButton.addTarget(self, action:#selector(exitView), for: .touchUpInside)
-    }
-    
-    @objc private func exitView() {
-        self.view.removeFromSuperview()
     }
 
     /*
