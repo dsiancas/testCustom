@@ -58,6 +58,12 @@ public class RavnAlert: UIView {
         
         self.titleLabel.text = ""
         self.messageLabel.text = ""
+        
+        mainButton.addTarget(self, action:#selector(exitView), for: .touchUpInside)
+    }
+    
+    @objc private func exitView() {
+        self.view.removeFromSuperview()
     }
 
     /*
