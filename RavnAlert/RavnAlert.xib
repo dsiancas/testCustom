@@ -9,9 +9,21 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RavnAlert" customModule="RavnAlert" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RavnAlert" customModule="RavnAlert" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonView" destination="mke-dh-jyR" id="zce-Ai-W3C"/>
+                <outlet property="cardView" destination="D3D-0p-4H3" id="baQ-Ex-hGr"/>
+                <outlet property="containerView" destination="3Xs-WD-ocE" id="B1g-MQ-Fnl"/>
+                <outlet property="iconContainerView" destination="icx-HF-F8T" id="hJ2-IM-3S8"/>
+                <outlet property="iconImage" destination="4l5-jt-yi6" id="Dy4-eo-6UR"/>
+                <outlet property="iconView" destination="dpq-v3-Phy" id="IXa-Lq-tPR"/>
+                <outlet property="mainButton" destination="A1x-CP-hag" id="pgA-KT-o3n"/>
+                <outlet property="messageLabel" destination="9Sc-8P-kr7" id="7Ag-8o-Sef"/>
+                <outlet property="titleLabel" destination="CTi-oo-bMa" id="Mza-J9-TO3"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RavnAlert" customModule="RavnAlert" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -84,26 +96,25 @@
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dpq-v3-Phy">
                                             <rect key="frame" x="2" y="2" width="56" height="56"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4l5-jt-yi6">
+                                                    <rect key="frame" x="13.5" y="13.5" width="28" height="28"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="56" id="Wyu-RR-VhI"/>
                                                 <constraint firstAttribute="height" constant="56" id="nFZ-6d-cUh"/>
                                             </constraints>
                                         </view>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4l5-jt-yi6">
-                                            <rect key="frame" x="16" y="16" width="28" height="28"/>
-                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="4l5-jt-yi6" secondAttribute="bottom" constant="16" id="76V-Sv-VF2"/>
-                                        <constraint firstItem="4l5-jt-yi6" firstAttribute="leading" secondItem="icx-HF-F8T" secondAttribute="leading" constant="16" id="R0a-vg-zpB"/>
                                         <constraint firstAttribute="width" constant="60" id="Tmz-87-E9t"/>
                                         <constraint firstAttribute="height" constant="60" id="aS3-FG-ULt"/>
                                         <constraint firstItem="dpq-v3-Phy" firstAttribute="centerX" secondItem="icx-HF-F8T" secondAttribute="centerX" id="aYl-1A-S5q"/>
                                         <constraint firstItem="dpq-v3-Phy" firstAttribute="centerY" secondItem="icx-HF-F8T" secondAttribute="centerY" id="kWP-gO-pJg"/>
-                                        <constraint firstAttribute="trailing" secondItem="4l5-jt-yi6" secondAttribute="trailing" constant="16" id="pL7-Xk-JqK"/>
-                                        <constraint firstItem="4l5-jt-yi6" firstAttribute="top" secondItem="icx-HF-F8T" secondAttribute="top" constant="16" id="vuF-nN-G7t"/>
                                     </constraints>
                                 </view>
                             </subviews>
@@ -136,17 +147,6 @@
                 <constraint firstItem="maQ-kf-O6p" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="yQI-h7-ldk"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <connections>
-                <outlet property="buttonView" destination="mke-dh-jyR" id="0xn-I3-0m2"/>
-                <outlet property="cardView" destination="D3D-0p-4H3" id="HIQ-aC-EVb"/>
-                <outlet property="containerView" destination="3Xs-WD-ocE" id="FKi-QN-Tcp"/>
-                <outlet property="iconContainerView" destination="icx-HF-F8T" id="bqf-UP-bFE"/>
-                <outlet property="iconImage" destination="4l5-jt-yi6" id="Kr3-NI-kGG"/>
-                <outlet property="iconView" destination="dpq-v3-Phy" id="XSc-gP-tMQ"/>
-                <outlet property="mainButton" destination="A1x-CP-hag" id="1yd-xo-9YB"/>
-                <outlet property="messageLabel" destination="9Sc-8P-kr7" id="6LJ-eH-r3D"/>
-                <outlet property="titleLabel" destination="CTi-oo-bMa" id="nfJ-sV-hcO"/>
-            </connections>
             <point key="canvasLocation" x="95" y="-206"/>
         </view>
     </objects>
