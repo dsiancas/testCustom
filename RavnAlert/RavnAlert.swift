@@ -47,6 +47,8 @@ public class RavnAlert: UIView {
         otherContentView.autoresizingMask = []
         otherContentView.translatesAutoresizingMaskIntoConstraints = true
         
+        titleLabel.text = ""
+        messageLabel.text = ""
     }
     
     public required init?(coder aDecoder: NSCoder) {
