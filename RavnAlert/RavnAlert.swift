@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class IconAlertView: UIView {
+public class RavnAlert: UIView {
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var cardView: UIView!
@@ -22,7 +22,7 @@ public class IconAlertView: UIView {
     @IBOutlet weak var iconView: UIView!
     @IBOutlet weak var iconImage: UIImageView!
     
-    let nibName = "IconAlertView"
+    let nibName = "RavnAlert"
     var otherContentView: UIView!
     
     public override init(frame: CGRect) {

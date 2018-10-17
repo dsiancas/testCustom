@@ -184,8 +184,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 @class NSCoder;
 
-SWIFT_CLASS("_TtC9RavnAlert13IconAlertView")
-@interface IconAlertView : UIView
+SWIFT_CLASS("_TtC9RavnAlert9RavnAlert")
+@interface RavnAlert : UIView
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
