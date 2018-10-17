@@ -1,0 +1,11 @@
+framework module RavnAlert {
+  umbrella header "RavnAlert.h"
+
+  export *
+  module * { export * }
+}
+
+module RavnAlert.Swift {
+    header "RavnAlert-Swift.h"
+    requires objc
+}
