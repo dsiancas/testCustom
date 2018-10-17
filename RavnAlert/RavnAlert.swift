@@ -40,7 +40,7 @@ public class RavnAlert: UIView {
     private func setUpView() {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: self.nibName, bundle: bundle)
-        self.otherContentView = nib.instantiate(withOwner: self, options: nil).first as? UIView
+        self.otherContentView = nib.instantiate(withOwner: self, options: nil).first as! UIView
         addSubview(otherContentView)
         
         otherContentView.center = self.center
