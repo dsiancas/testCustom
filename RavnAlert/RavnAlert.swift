@@ -10,17 +10,17 @@ import UIKit
 
 public class RavnAlert: UIView {
     
-    @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var cardView: UIView!
-    @IBOutlet weak var iconContainerView: UIView!
+    @IBOutlet private weak var containerView: UIView!
+    @IBOutlet private weak var cardView: UIView!
+    @IBOutlet private weak var iconContainerView: UIView!
     
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var messageLabel: UILabel!
-    @IBOutlet weak var buttonView: UIView!
-    @IBOutlet weak var mainButton: UIButton!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var messageLabel: UILabel!
+    @IBOutlet private weak var buttonView: UIView!
+    @IBOutlet private weak var mainButton: UIButton!
     
-    @IBOutlet weak var iconView: UIView!
-    @IBOutlet weak var iconImage: UIImageView!
+    @IBOutlet private weak var iconView: UIView!
+    @IBOutlet private weak var iconImage: UIImageView!
     
     let nibName = "RavnAlert"
     var otherContentView: UIView!
@@ -31,10 +31,10 @@ public class RavnAlert: UIView {
     }
     
     public func setup(title: String, message: String, buttonTitle: String, image: UIImage) {
-        titleLabel.text = title
-        messageLabel.text = message
-        mainButton.titleLabel?.text = buttonTitle
-        iconImage.image = image
+        self.titleLabel.text = title
+        self.messageLabel.text = message
+        self.mainButton.titleLabel?.text = buttonTitle
+        self.iconImage.image = image
     }
     
     private func setUpView() {
