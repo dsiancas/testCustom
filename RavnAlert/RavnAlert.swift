@@ -63,7 +63,7 @@ public class RavnAlert: UIView {
     }
     
     @objc private func exitView() {
-        self.view.removeFromSuperview()
+        self.removeFromSuperview()
     }
 
     /*
