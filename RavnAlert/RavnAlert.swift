@@ -23,10 +23,15 @@ public class RavnAlert: UIView {
     @IBOutlet private weak var iconImage: UIImageView!
     
     let nibName = "RavnAlert"
-    var otherContentView: UIView!
+    var view: UIView!
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
+        setUpView()
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
         setUpView()
     }
     
@@ -40,21 +45,18 @@ public class RavnAlert: UIView {
     private func setUpView() {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: self.nibName, bundle: bundle)
-        self.otherContentView = nib.instantiate(withOwner: self, options: nil).first as! UIView
-        addSubview(otherContentView)
+        self.view = (nib.instantiate(withOwner: self, options: nil).first as! UIView)
+        addSubview(self.view)
         
-        otherContentView.center = self.center
-        otherContentView.autoresizingMask = []
-        otherContentView.translatesAutoresizingMaskIntoConstraints = true
+        self.view.center = self.center
+        self.view.autoresizingMask = []
+        self.view.translatesAutoresizingMaskIntoConstraints = true
         
-        titleLabel.text = ""
-        messageLabel.text = ""
+        self.titleLabel.text = ""
+        self.messageLabel.text = ""
     }
     
-    public required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-//        setUpView()
-    }
+    
 
     /*
     // Only override draw() if you perform custom drawing.
