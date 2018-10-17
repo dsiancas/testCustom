@@ -51,7 +51,7 @@ public class RavnAlert: UIView {
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setUpView()
+//        setUpView()
     }
 
     /*
