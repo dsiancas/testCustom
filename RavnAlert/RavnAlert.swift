@@ -106,7 +106,7 @@ public class RavnAlert: UIView {
         })
         UIView.animate(withDuration: 0.33, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 10, options: UIView.AnimationOptions(rawValue: 0), animations: {
             self.cardView.center  = self.center
-            self.view.alpha = 1
+            self.view.alpha = 0.5
         }, completion: { (completed) in
             
         })
