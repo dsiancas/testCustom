@@ -59,13 +59,16 @@ public class RavnAlert: UIView {
         setUpView(alertType: .headhunter)
     }
     
-    public func setup(type: AlertType, title: String, message: String, buttonTitle: String, image: UIImage, buttonAction: @escaping ButtonAction) {
-        self.alertType = type
+    public func setup(alertType: AlertType, title: String, message: String, buttonTitle: String, image: UIImage, buttonAction: @escaping ButtonAction) {
+        self.alertType = alertType
         self.titleLabel.text = title
         self.messageLabel.text = message
         self.mainButton.setTitle(buttonTitle, for: .normal)
         self.iconImage.image = image
         self.buttonAction = buttonAction
+        let bundle = Bundle(for: type(of: self))
+        let nib = UINib(nibName: alertType.identifier, bundle: bundle)
+        self.view = (nib.instantiate(withOwner: self, options: nil).first as! UIView)
     }
     
     private func setUpView(alertType: AlertType) {

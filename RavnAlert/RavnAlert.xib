@@ -43,7 +43,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D3D-0p-4H3" userLabel="Card">
-                                    <rect key="frame" x="32" y="252.5" width="311" height="162"/>
+                                    <rect key="frame" x="32" y="253" width="311" height="161.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTi-oo-bMa">
                                             <rect key="frame" x="16" y="40" width="279" height="21"/>
@@ -51,14 +51,14 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Sc-8P-kr7">
-                                            <rect key="frame" x="16" y="75" width="279" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Sc-8P-kr7">
+                                            <rect key="frame" x="16" y="75" width="279" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mke-dh-jyR">
-                                            <rect key="frame" x="0.0" y="112" width="311" height="50"/>
+                                            <rect key="frame" x="0.0" y="111.5" width="311" height="50"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1x-CP-hag">
                                                     <rect key="frame" x="0.0" y="0.0" width="311" height="50"/>
@@ -92,7 +92,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="icx-HF-F8T" userLabel="Icon Container">
-                                    <rect key="frame" x="157.5" y="222.5" width="60" height="60"/>
+                                    <rect key="frame" x="157.5" y="223" width="60" height="60"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dpq-v3-Phy">
                                             <rect key="frame" x="2" y="2" width="56" height="56"/>
