@@ -9,12 +9,12 @@
 import UIKit
 
 public enum AlertType {
-    case headhunter
+    case one
     case other
     
     var identifier: String {
         switch self {
-        case .headhunter:
+        case .one:
             return "RavnAlert"
         case .other:
             return "OtherAlert"
@@ -26,7 +26,7 @@ public class RavnAlert: UIView {
     
     public typealias ButtonAction = () -> ()
     
-    private var alertType: AlertType = .headhunter
+    private var alertType: AlertType = .one
     
     @IBOutlet private weak var containerView: UIView!
     @IBOutlet private weak var cardView: UIView!
@@ -46,17 +46,14 @@ public class RavnAlert: UIView {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        //setUpView(alertType: .headhunter)
     }
     
     public init(frame: CGRect, type: AlertType) {
         super.init(frame: frame)
-        //setUpView(alertType: type)
     }
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        //setUpView(alertType: .headhunter)
     }
     
     public func setup(alertType: AlertType, title: String, message: String, buttonTitle: String, image: UIImage, buttonAction: @escaping ButtonAction) {
