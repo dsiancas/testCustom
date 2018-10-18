@@ -43,6 +43,7 @@ public class RavnAlert: UIView {
     let nibName = "RavnAlert"
     var view: UIView!
     private var buttonAction: ButtonAction = { }
+    private var animation = true
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -89,6 +90,22 @@ public class RavnAlert: UIView {
         self.messageLabel.text = ""
         
         mainButton.addTarget(self, action:#selector(exitView), for: .touchUpInside)
+    }
+    
+    public func setupAnimation () {
+        if animation {
+            UIView.animate(withDuration: 0.33, animations: {
+                self.containerView.alpha = 0.66
+            })
+            UIView.animate(withDuration: 0.33, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 10, options: UIView.AnimationOptions(rawValue: 0), animations: {
+                self.cardView.center  = self.center
+            }, completion: { (completed) in
+    
+            })
+        }else{
+            self.containerView.alpha = 0.66
+            self.cardView.center  = self.center
+        }
     }
     
     @objc private func exitView() {
