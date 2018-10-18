@@ -12,6 +12,7 @@
 		65039AAD2177A1E400576D46 /* RavnAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 65039A9F2177A1E400576D46 /* RavnAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65039AB82177A20500576D46 /* RavnAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65039AB62177A20500576D46 /* RavnAlert.xib */; };
 		65039AB92177A20500576D46 /* RavnAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65039AB72177A20500576D46 /* RavnAlert.swift */; };
+		65039ABF2177E80F00576D46 /* OtherAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65039ABE2177E80F00576D46 /* OtherAlert.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		65039AAC2177A1E400576D46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65039AB62177A20500576D46 /* RavnAlert.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RavnAlert.xib; sourceTree = "<group>"; };
 		65039AB72177A20500576D46 /* RavnAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RavnAlert.swift; sourceTree = "<group>"; };
+		65039ABE2177E80F00576D46 /* OtherAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherAlert.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				65039AA02177A1E400576D46 /* Info.plist */,
 				65039AB72177A20500576D46 /* RavnAlert.swift */,
 				65039AB62177A20500576D46 /* RavnAlert.xib */,
+				65039ABE2177E80F00576D46 /* OtherAlert.xib */,
 			);
 			path = RavnAlert;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65039AB82177A20500576D46 /* RavnAlert.xib in Resources */,
+				65039ABF2177E80F00576D46 /* OtherAlert.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

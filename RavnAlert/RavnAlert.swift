@@ -8,9 +8,25 @@
 
 import UIKit
 
+public enum AlertType {
+    case headhunter
+    case other
+    
+    var identifier: String {
+        switch self {
+        case .headhunter:
+            return "RavnAlert"
+        case .other:
+            return "OtherAlert"
+        }
+    }
+}
+
 public class RavnAlert: UIView {
     
     public typealias ButtonAction = () -> ()
+    
+    private var alertType: AlertType = .headhunter
     
     @IBOutlet private weak var containerView: UIView!
     @IBOutlet private weak var cardView: UIView!
@@ -30,15 +46,21 @@ public class RavnAlert: UIView {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        setUpView()
+        setUpView(alertType: .headhunter)
+    }
+    
+    public init(type: AlertType) {
+        super.init(frame: .zero)
+        setUpView(alertType: type)
     }
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setUpView()
+        setUpView(alertType: .headhunter)
     }
     
-    public func setup(title: String, message: String, buttonTitle: String, image: UIImage, buttonAction: @escaping ButtonAction) {
+    public func setup(type: AlertType, title: String, message: String, buttonTitle: String, image: UIImage, buttonAction: @escaping ButtonAction) {
+        self.alertType = type
         self.titleLabel.text = title
         self.messageLabel.text = message
         self.mainButton.setTitle(buttonTitle, for: .normal)
@@ -46,9 +68,9 @@ public class RavnAlert: UIView {
         self.buttonAction = buttonAction
     }
     
-    private func setUpView() {
+    private func setUpView(alertType: AlertType) {
         let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: self.nibName, bundle: bundle)
+        let nib = UINib(nibName: alertType.identifier, bundle: bundle)
         self.view = (nib.instantiate(withOwner: self, options: nil).first as! UIView)
         addSubview(self.view)
         
