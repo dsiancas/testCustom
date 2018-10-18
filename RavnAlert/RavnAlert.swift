@@ -46,17 +46,17 @@ public class RavnAlert: UIView {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        setUpView(alertType: .headhunter)
+        //setUpView(alertType: .headhunter)
     }
     
     public init(frame: CGRect, type: AlertType) {
         super.init(frame: frame)
-        setUpView(alertType: type)
+        //setUpView(alertType: type)
     }
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setUpView(alertType: .headhunter)
+        //setUpView(alertType: .headhunter)
     }
     
     public func setup(alertType: AlertType, title: String, message: String, buttonTitle: String, image: UIImage, buttonAction: @escaping ButtonAction) {
@@ -69,6 +69,12 @@ public class RavnAlert: UIView {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: alertType.identifier, bundle: bundle)
         self.view = (nib.instantiate(withOwner: self, options: nil).first as! UIView)
+        addSubview(self.view)
+        self.view.center = self.center
+        self.view.autoresizingMask = []
+        self.view.translatesAutoresizingMaskIntoConstraints = true
+        
+        mainButton.addTarget(self, action:#selector(exitView), for: .touchUpInside)
     }
     
     private func setUpView(alertType: AlertType) {
