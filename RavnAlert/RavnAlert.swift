@@ -53,9 +53,11 @@ public class RavnAlert: UIView {
     }
     
     public func stylize(cornerRadius: Double, hasShadow: Bool) {
-        cardView.layer.borderWidth = CGFloat(cornerRadius)
+        cardView.layer.cornerRadius = CGFloat(cornerRadius)
+        cardView.layer.masksToBounds = true
         if hasShadow {
-            cardView.layer.shadowRadius = 5
+            cardView.layer.shadowRadius = 15
+            cardView.layer.shadowOpacity = 4
         }
     }
     
