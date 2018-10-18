@@ -12,12 +12,12 @@ public enum RavnIcon {
     case close
     case edit
     
-    var image: UIImage {
+    public var image: UIImage {
         switch self {
         case .close:
-            return UIImage(cgImage: #imageLiteral(resourceName: "icons-close").cgImage!)
+            return #imageLiteral(resourceName: "icons-close")
         case .edit:
-            return UIImage(cgImage: #imageLiteral(resourceName: "icons-edit").cgImage!)
+            return #imageLiteral(resourceName: "icons-edit")
         }
     }
 }
