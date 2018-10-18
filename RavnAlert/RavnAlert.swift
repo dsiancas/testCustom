@@ -83,7 +83,7 @@ public class RavnAlert: UIView {
         addSubview(self.view)
         
         self.view.center = self.center
-        self.containerView.center = CGPoint(x: 0, y: self.view.center.y)
+        self.cardView.center = CGPoint(x: 0, y: self.view.center.y)
         self.view.autoresizingMask = []
         self.view.translatesAutoresizingMaskIntoConstraints = true
         
