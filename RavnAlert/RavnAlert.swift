@@ -49,8 +49,8 @@ public class RavnAlert: UIView {
         setUpView(alertType: .headhunter)
     }
     
-    public init(type: AlertType) {
-        super.init(frame: .zero)
+    public init(frame: CGRect, type: AlertType) {
+        super.init(frame: frame)
         setUpView(alertType: type)
     }
     
