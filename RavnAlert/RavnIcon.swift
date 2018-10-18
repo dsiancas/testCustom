@@ -15,9 +15,9 @@ public enum RavnIcon {
     var image: UIImage {
         switch self {
         case .close:
-            return UIImage(cgImage: #imageLiteral(resourceName: "icons-close.pdf").cgImage!)
+            return UIImage(cgImage: #imageLiteral(resourceName: "icons-close").cgImage!)
         case .edit:
-            return UIImage(cgImage: #imageLiteral(resourceName: "icons-edit.pdf").cgImage!)
+            return UIImage(cgImage: #imageLiteral(resourceName: "icons-edit").cgImage!)
         }
     }
 }
