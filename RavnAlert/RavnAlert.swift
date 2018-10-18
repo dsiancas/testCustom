@@ -52,6 +52,13 @@ public class RavnAlert: UIView {
         super.init(coder: aDecoder)
     }
     
+    public func stylize(cornerRadius: Double, hasShadow: Bool) {
+        cardView.layer.borderWidth = CGFloat(cornerRadius)
+        if hasShadow {
+            cardView.layer.shadowRadius = 5
+        }
+    }
+    
     public func setup(alertType: AlertType, title: String, message: String, buttonTitle: String, icon: RavnIcon, buttonAction: @escaping ButtonAction) {
         
         setUpView(alertType: alertType)
