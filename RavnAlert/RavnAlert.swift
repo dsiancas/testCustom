@@ -52,7 +52,7 @@ public class RavnAlert: UIView {
         super.init(coder: aDecoder)
     }
     
-    public func setup(alertType: AlertType, title: String, message: String, buttonTitle: String, image: UIImage, buttonAction: @escaping ButtonAction) {
+    public func setup(alertType: AlertType, title: String, message: String, buttonTitle: String, icon: RavnIcon, buttonAction: @escaping ButtonAction) {
         
         setUpView(alertType: alertType)
         
@@ -60,7 +60,7 @@ public class RavnAlert: UIView {
         self.titleLabel.text = title
         self.messageLabel.text = message
         self.mainButton.setTitle(buttonTitle, for: .normal)
-        self.iconImage.image = image
+        self.iconImage.image = icon.image
         self.buttonAction = buttonAction
         
         mainButton.addTarget(self, action:#selector(exitView), for: .touchUpInside)
