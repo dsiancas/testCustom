@@ -60,19 +60,15 @@ public class RavnAlert: UIView {
     }
     
     public func setup(alertType: AlertType, title: String, message: String, buttonTitle: String, image: UIImage, buttonAction: @escaping ButtonAction) {
+        
+        setUpView(alertType: alertType)
+        
         self.alertType = alertType
         self.titleLabel.text = title
         self.messageLabel.text = message
         self.mainButton.setTitle(buttonTitle, for: .normal)
         self.iconImage.image = image
         self.buttonAction = buttonAction
-        let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: alertType.identifier, bundle: bundle)
-        self.view = (nib.instantiate(withOwner: self, options: nil).first as! UIView)
-        addSubview(self.view)
-        self.view.center = self.center
-        self.view.autoresizingMask = []
-        self.view.translatesAutoresizingMaskIntoConstraints = true
         
         mainButton.addTarget(self, action:#selector(exitView), for: .touchUpInside)
     }
