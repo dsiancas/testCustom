@@ -15,6 +15,7 @@
 		65039ABF2177E80F00576D46 /* OtherAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65039ABE2177E80F00576D46 /* OtherAlert.xib */; };
 		65F939352178F3FE00420D6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65F939342178F3FE00420D6B /* Assets.xcassets */; };
 		65F939372178F58A00420D6B /* RavnIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F939362178F58A00420D6B /* RavnIcon.swift */; };
+		65F9396B21794AFB00420D6B /* RavnAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F9396A21794AFB00420D6B /* RavnAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		65039ABE2177E80F00576D46 /* OtherAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherAlert.xib; sourceTree = "<group>"; };
 		65F939342178F3FE00420D6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65F939362178F58A00420D6B /* RavnIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RavnIcon.swift; sourceTree = "<group>"; };
+		65F9396A21794AFB00420D6B /* RavnAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RavnAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				65039ABE2177E80F00576D46 /* OtherAlert.xib */,
 				65F939342178F3FE00420D6B /* Assets.xcassets */,
 				65F939362178F58A00420D6B /* RavnIcon.swift */,
+				65F9396A21794AFB00420D6B /* RavnAnimation.swift */,
 			);
 			path = RavnAlert;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65F9396B21794AFB00420D6B /* RavnAnimation.swift in Sources */,
 				65039AB92177A20500576D46 /* RavnAlert.swift in Sources */,
 				65F939372178F58A00420D6B /* RavnIcon.swift in Sources */,
 			);

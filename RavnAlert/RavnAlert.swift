@@ -83,7 +83,6 @@ public class RavnAlert: UIView {
         addSubview(self.view)
         
         self.view.center = self.center
-        self.cardView.center = CGPoint(x: 0, y: self.view.center.y)
         self.view.autoresizingMask = []
         self.view.translatesAutoresizingMaskIntoConstraints = true
         
@@ -93,21 +92,24 @@ public class RavnAlert: UIView {
         mainButton.addTarget(self, action:#selector(exitView), for: .touchUpInside)
     }
     
-    public func setupAnimation () {
-        if animation {
-            UIView.animate(withDuration: 0.33, animations: {
-                self.containerView.alpha = 0.66
-            })
-            UIView.animate(withDuration: 0.33, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 10, options: UIView.AnimationOptions(rawValue: 0), animations: {
-                self.cardView.center  = self.center
-                self.containerView.alpha = 0.5
-            }, completion: { (completed) in
-    
-            })
-        }else{
-            self.containerView.alpha = 0.66
-            self.cardView.center  = self.center
+    public func setupAnimation(position: RavnAnimation) {
+        switch position {
+        case .right:
+            self.cardView.center = CGPoint(x: 0, y: self.view.center.y)
+        case .down:
+            self.cardView.center = CGPoint(x: self.view.center.x, y: 0)
+        default:
+            return
         }
+        UIView.animate(withDuration: 0.33, animations: {
+            self.view.alpha = 0.66
+        })
+        UIView.animate(withDuration: 0.33, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 10, options: UIView.AnimationOptions(rawValue: 0), animations: {
+            self.cardView.center  = self.center
+            self.view.alpha = 0
+        }, completion: { (completed) in
+            
+        })
     }
     
     @objc private func exitView() {
