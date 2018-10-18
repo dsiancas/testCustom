@@ -37,7 +37,7 @@
 		65039AB62177A20500576D46 /* RavnAlert.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RavnAlert.xib; sourceTree = "<group>"; };
 		65039AB72177A20500576D46 /* RavnAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RavnAlert.swift; sourceTree = "<group>"; };
 		65039ABE2177E80F00576D46 /* OtherAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherAlert.xib; sourceTree = "<group>"; };
-		65F939342178F3FE00420D6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		65F939342178F3FE00420D6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../../../../../Users/daniel/Ravn/Custom/RavnAlert/RavnAlert/Assets.xcassets; sourceTree = SDKROOT; };
 		65F939362178F58A00420D6B /* RavnIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RavnIcon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 

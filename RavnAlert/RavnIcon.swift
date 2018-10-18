@@ -13,11 +13,12 @@ public enum RavnIcon {
     case edit
     
     public var image: UIImage {
+        let bundle = Bundle(for: RavnAlert.self)
         switch self {
         case .close:
-            return UIImage(named: "icons-close")!
+            return UIImage(named: "icons-close", in: bundle, compatibleWith: nil)!
         case .edit:
-            return UIImage(named: "icons-edit")!
+            return UIImage(named: "icons-edit", in: bundle, compatibleWith: nil)!
         }
     }
 }
